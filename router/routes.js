@@ -4,7 +4,7 @@ const path= require('path')
 
 const db = require("../utils/db");
 
-db.query("USE Infotrek_21");
+db.query("USE heroku_73120ef8fb3d1db");
 
 router.get('/', function(req, res) {
   res.sendFile( path.resolve('./public/static/index.html') );

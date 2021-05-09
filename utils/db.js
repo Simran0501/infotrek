@@ -12,7 +12,7 @@ db.connect(function (err) {
   }
 });
 
-db.query("CREATE DATABASE IF NOT EXISTS Infotrek_21", function (err, result) {
+db.query("CREATE DATABASE IF NOT EXISTS heroku_73120ef8fb3d1db", function (err, result) {
   if (err) throw err;
 });
 
