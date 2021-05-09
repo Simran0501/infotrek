@@ -2,7 +2,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-const session = require("express-session");
+const session = require("cookie-session");
 const compression = require("compression");
 
 const router = require("./router/routes");
