@@ -12,9 +12,9 @@ db.connect(function (err) {
   }
 });
 
-db.query("CREATE DATABASE IF NOT EXISTS heroku_73120ef8fb3d1db", function (err, result) {
-  if (err) throw err;
-});
+// db.query("CREATE DATABASE IF NOT EXISTS heroku_73120ef8fb3d1db", function (err, result) {
+//   if (err) throw err;
+// });
 
 module.exports = db;
 require("../models/registration");
