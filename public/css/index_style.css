@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css?family=Blinker:400,800&display=swap");
+
+html {
+  overflow-x: hidden;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body {
+  animation: gradient 10s ease infinite;
+  font-family: Blinker, sans-serif;
+  letter-spacing: 0.1rem;
+  color: #0c222b;
+
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+.hero {
+  /* background: #000046; 
+  background: -webkit-linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); 
+  background: linear-gradient(
+    to left,
+    #1cb5e0,
+    #000046
+  );   */
+
+  background: #000046;
+  background: -webkit-linear-gradient(to right, #1cb5e0, #000046);
+  background: linear-gradient(to right, #792a2a, #101044);
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero__title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 1;
+}
+
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 8px;
+  height: 8px;
+  border: solid 1px#fff;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+  animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #6b778d;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  left: 35vw;
+  top: 10vh;
+}
+.cube:nth-child(4) {
+  border: solid 1px#fff;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  border: solid 1px#fff;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+
+.cube:nth-child(7) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  left: 30vw;
+  top: 70vh;
+}
+
+.cube:nth-child(8) {
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  left: 60vw;
+  top: 20vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#page-wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.infotrek {
+  position: absolute;
+  top: 7%;
+  left: 6%;
+}
+
+.infotrek img {
+  height: 12%;
+  width: 12%;
+}
+
+#timer div {
+  background-color: rgba(12, 8, 8, 0.863);
+  color: #ffffff;
+  width: 105px;
+  height: 105px;
+  border-radius: 5px;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 2px 4px 4px rgb(221, 236, 235);
+}
+#timer div span {
+  display: block;
+  margin-top: -2px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.infotrek-main {
+  position: fixed;
+}
+
+.infotrek-main h1 {
+  position: fixed;
+  top: 35%;
+  left: 28rem;
+}
+
+.infotrek-main #cs {
+  position: fixed;
+}
+
+.infotrek-main h1 img {
+  animation: shakeX; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s !important;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  height: 20vh;
+  width: 40vw;
+}
+
+#cs {
+  position: fixed;
+  margin-left: 37%;
+  margin-top: 25%;
+  color: white;
+  width: 30%;
+  height: 10%;
+  font-family: Blinker, sans-serif;
+  animation: flash; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s !important;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@media screen and (max-width: 600px)  {
+  body {
+    background-size: 300% 300%;
+    overflow-x: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .infotrek {
+    top: 0.2rem;
+  }
+
+  .infotrek img {
+    width: 50%;
+  }
+
+  #cs {
+    top: 35rem !important;
+    margin-top: -10rem;
+    margin-left: -28rem;
+    width: 80%;
+    height: 1%;
+  }
+
+  .infotrek-main {
+    margin-left: -2rem;
+  }
+
+  .infotrek-main img {
+    margin-top: -2rem;
+    margin-left: -24rem;
+    width: 70%;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  #timer {
+    margin-top: -20px;
+  }
+  #timer div {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  #timer div span {
+    font-size: 14px;
+  }
+
+  .navbar-links li a {
+    font-size: 0.1rem;
+  }
+}
+@media screen and (max-width: 315px) and (max-width: 600px) {
+  #cs {
+    top: 20rem;
+    margin-top: 2rem;
+    margin-left: 9%;
+    position: fixed;
+    height: 25%;
+  }
+  #timer {
+    margin-bottom: -20rem;
+  }
+  #timer div {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    margin-top: -15rem;
+  }
+  #timer div span {
+    font-size: 14px;
+  }
+
+  .infotrek-main {
+    margin-left: -2rem;
+  }
+
+  .infotrek-main h1 img {
+    margin-top: -2rem;
+    margin-left: -24rem;
+    width: 70%;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 412px) and (orientation: portrait) 
+{
+  #cs {
+    top: 35rem;
+
+    margin-left: 15%;
+    position: fixed;
+    height: 7%;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #cs {
+    top: 35rem;
+    margin-left: 15%;
+    position: fixed;
+    height: 7%;
+  }
+
+  #timer {
+    margin-bottom: -20rem;
+    margin-left: 4rem;
+  }
+  #timer div {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    margin-top: -15rem;
+  }
+  #timer div span {
+    font-size: 14px;
+  }
+
+  .infotrek-main {
+    margin-left: -2rem;
+  }
+
+  .infotrek-main h1 img {
+    margin-top: -1rem;
+    margin-left: -25rem;
+    width: 70vw;
+  }
+
+  .navbar-links li a {
+    font-size: 0.7rem;
+  }
+}
+
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+
+ 
+    #cs {
+      margin-left: 20%;
+      margin-top: 10rem;
+    }
+    
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+ 
+  
+  #cs {
+    margin-left: 20%;
+    margin-top: 10rem;
+  }
+   
+  .infotrek-main {
+    left: -3rem !important;
+  }
+
+  #timer {
+    margin-bottom: -15rem;
+  }
+  #timer div {
+    width: 120px;
+    height: 120px;
+    font-size: 32px;
+    margin-top: -25rem;
+  }
+  #timer div span {
+    font-size: 14px;
+  }
+
+  /* .infotrek-main h1{
+    margin-right: -30rem;
+  }
+
+  .infotrek-main h1 img{
+    margin-top: -2rem;
+    margin-right: 10rem;
+    width: 40vh;
+  }
+  */
+  
+  .infotrek-main h1 img {
+    margin-top: -1rem;
+    margin-right: 30%;
+    width: 40vh;
+  }
+}
