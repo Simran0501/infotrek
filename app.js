@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const session = require("cookie-session");
 const compression = require("compression");
-const forever = require("forever");
+
 
 const router = require("./router/routes");
 
