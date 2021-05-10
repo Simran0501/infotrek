@@ -24,7 +24,7 @@ router.get("/registration", function (request, response) {
         "select * from  registration WHERE rollno = ?",
         [rollno, password,name],
         function (error, results, fields) {
-          if (error) throw error;
+          if (error) console.log(error);
           else {
            if(results.length>0) {
             response.render("layout/registration", {
