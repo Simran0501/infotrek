@@ -21,7 +21,7 @@ router.get("/registration", function (request, response) {
     var name =  request.body.name;
     if (rollno.toString().length==9 && password && name) {
       db.query(
-        "select * from  registration WHERE rollno = ? AND password = ? AND name = ?",
+        "select * from  registration WHERE rollno = ?",
         [rollno, password,name],
         function (error, results, fields) {
           if (error) throw error;
