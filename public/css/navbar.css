@@ -46,14 +46,14 @@
 .navbar-links li a {
   display: block;
   text-decoration: none;
-  color:rgb(247, 210, 247);
+  color:rgb(235, 230, 235);
   padding: 1rem;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
 }
 
 .navbar-links :hover {
-  color: rgb(237, 244, 245) !important;
+  color: rgb(97, 219, 235) !important;
   transition: all 0.3s ease;
 }
 
